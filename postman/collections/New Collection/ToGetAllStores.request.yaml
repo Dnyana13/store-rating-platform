@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/stores
+method: GET
+headers:
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NTkxMTg4MSwiZXhwIjoxNzc1OTk4MjgxfQ.W3Au9ydLyvZoj5AT3mh-NSIx81fSSn6G67UQG4KEqD4
+examples: .resources/ToGetAllStores.resources/examples
+order: 3038694607666994

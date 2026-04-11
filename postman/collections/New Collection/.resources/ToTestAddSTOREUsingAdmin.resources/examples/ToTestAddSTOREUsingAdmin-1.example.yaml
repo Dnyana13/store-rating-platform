@@ -1,0 +1,37 @@
+$kind: http-example
+name: ToTestAddSTOREUsingAdmin
+request:
+  url: http://localhost:5000/api/admin/add-store
+  method: POST
+  headers:
+    Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NTkxMTg4MSwiZXhwIjoxNzc1OTk4MjgxfQ.W3Au9ydLyvZoj5AT3mh-NSIx81fSSn6G67UQG4KEqD4
+  body:
+    type: json
+    content: "{\r
+
+      \  \"name\": \"Pizza Store\",\r
+
+      \  \"email\": \"pizza@test.com\",\r
+
+      \  \"address\": \"Pune\",\r
+
+      \  \"owner_id\": 2\r
+
+      }"
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "196"
+    etag: W/"c4-T5lFozBuR6l7ZjYQcEUQcZ0SAF0"
+    date: Sat, 11 Apr 2026 13:12:14 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"Store added","store":{"id":2,"name":"Pizza
+      Store","email":"pizza@test.com","address":"Pune","owner_id":2,"updatedAt":"2026-04-11T13:12:14.499Z","createdAt":"2026-04-11T13:12:14.499Z"}}'
+order: 3830847149673332

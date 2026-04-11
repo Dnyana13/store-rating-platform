@@ -1,0 +1,40 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/admin/add-user
+  method: POST
+  headers:
+    Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NTkxMTg4MSwiZXhwIjoxNzc1OTk4MjgxfQ.W3Au9ydLyvZoj5AT3mh-NSIx81fSSn6G67UQG4KEqD4
+  body:
+    type: json
+    content: "{\r
+
+      \  \"name\": \"Store Owner Example User Name\",\r
+
+      \  \"email\": \"owner1@test.com\",\r
+
+      \  \"password\": \"Password@123\",\r
+
+      \  \"address\": \"India Address\",\r
+
+      \  \"role\": \"OWNER\"\r
+
+      }"
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "301"
+    etag: W/"12d-6LBAT9ftUHIwMHrkcREhVvb3mPM"
+    date: Sat, 11 Apr 2026 12:55:58 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"User created","user":{"id":26,"name":"Store Owner Example
+      User
+      Name","email":"owner1@test.com","password":"$2b$10$HAoDvzxbLIazkVfoiRlLLOBXOD4vrEpeSiiPvRsiq/nnuOK2wEGN6","address":"India
+      Address","role":"OWNER","updatedAt":"2026-04-11T12:55:58.076Z","createdAt":"2026-04-11T12:55:58.076Z"}}'
+order: 1775912206848

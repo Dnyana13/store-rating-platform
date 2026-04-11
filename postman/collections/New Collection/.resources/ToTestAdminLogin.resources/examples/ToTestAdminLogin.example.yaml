@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/auth/login
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"email\": \"admin123@example.com\",\r
+
+      \  \"password\": \"Password@123\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "215"
+    etag: W/"d7-knr9Pl6be7ysHSuDS9thN7fZ4xA"
+    date: Sat, 11 Apr 2026 12:51:21 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"Login
+      successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NTkxMTg4MSwiZXhwIjoxNzc1OTk4MjgxfQ.W3Au9ydLyvZoj5AT3mh-NSIx81fSSn6G67UQG4KEqD4","role":"ADMIN"}'
+order: 1775911885315

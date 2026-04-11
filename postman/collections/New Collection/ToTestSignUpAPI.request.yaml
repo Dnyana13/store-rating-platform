@@ -1,0 +1,18 @@
+$kind: http-request
+url: http://localhost:5000/api/auth/signup
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Amarja Ramakant Sharma\", \r
+
+    \  \"email\": \"amarja@example.com\", \r
+
+    \  \"password\": \"Pass@123\",\r
+
+    \  \"address\": \"India\"\r
+
+    }"
+examples: .resources/ToTestSignUpAPI.resources/examples
+order: 4000

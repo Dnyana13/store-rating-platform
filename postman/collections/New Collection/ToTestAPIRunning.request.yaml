@@ -1,0 +1,5 @@
+$kind: http-request
+url: http://localhost:5000
+method: GET
+examples: .resources/ToTestAPIRunning.resources/examples
+order: 1000

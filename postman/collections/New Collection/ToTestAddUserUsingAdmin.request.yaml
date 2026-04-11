@@ -1,0 +1,22 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/add-user
+method: POST
+headers:
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NTkxMTg4MSwiZXhwIjoxNzc1OTk4MjgxfQ.W3Au9ydLyvZoj5AT3mh-NSIx81fSSn6G67UQG4KEqD4
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Store Owner Example User Name Long Enough\",\r
+
+    \  \"email\": \"owner@test.com\",\r
+
+    \  \"password\": \"Password@123\",\r
+
+    \  \"address\": \"India Address\",\r
+
+    \  \"role\": \"OWNER\"\r
+
+    }"
+examples: .resources/ToTestAddUserUsingAdmin.resources/examples
+order: 10000

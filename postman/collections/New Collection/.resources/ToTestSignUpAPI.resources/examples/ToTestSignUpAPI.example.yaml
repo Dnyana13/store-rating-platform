@@ -1,0 +1,35 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/auth/signup
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"name\": \"firstname secondname lastname\", \r
+
+      \  \"email\": \"amarja@example.com\", \r
+
+      \  \"password\": \"Pass@1234\",\r
+
+      \  \"address\": \"India\"\r
+
+      }"
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "303"
+    etag: W/"12f-zXS7GWdj+YBWJZhoYXC+t599oj0"
+    date: Sat, 11 Apr 2026 08:55:16 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"User registered
+      successfully","user":{"role":"USER","id":3,"name":"Amarja Ramakant
+      Sharma","email":"amarja@example.com","password":"$2b$10$LE03Pws1gQ.AllpUf8XOyu2DYogV9t7Z7Jd8Yh4PKmdDKdHqRGqyC","address":"India","updatedAt":"2026-04-11T08:55:16.300Z","createdAt":"2026-04-11T08:55:16.300Z"}}'
+order: 1775898110520

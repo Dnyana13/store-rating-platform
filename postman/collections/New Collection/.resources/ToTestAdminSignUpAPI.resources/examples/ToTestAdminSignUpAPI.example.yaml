@@ -1,0 +1,38 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/auth/signup
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"name\": \"Admin User Fullstack Developer Name\",\r
+
+      \  \"email\": \"admin123@example.com\",\r
+
+      \  \"password\": \"Password@123\",\r
+
+      \  \"address\": \"Maharashtra India Full Address\", \r
+
+      \  \"role\": \"ADMIN\"\r
+
+      }"
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "271"
+    etag: W/"10f-ZSIQmZopzJhRfK+UfznkT5TsuUU"
+    date: Sat, 11 Apr 2026 12:32:45 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"User registered
+      successfully","user":{"id":24,"name":"Admin User Fullstack Developer
+      Name","email":"admin123@example.com","address":"Maharashtra India Full
+      Address","role":"ADMIN","updatedAt":"2026-04-11T12:32:44.792Z","createdAt":"2026-04-11T12:32:44.792Z"}}'
+order: 1775910803324

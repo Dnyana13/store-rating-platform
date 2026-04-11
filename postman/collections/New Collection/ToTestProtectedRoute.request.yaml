@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:5000/protected
+method: GET
+headers:
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU4OTgzMDIsImV4cCI6MTc3NTk4NDcwMn0.sgSJnq49J5GUX2BKSi6ka-G5CkqsW1Qzp1IenyXP46U
+examples: .resources/ToTestProtectedRoute.resources/examples
+order: 7000

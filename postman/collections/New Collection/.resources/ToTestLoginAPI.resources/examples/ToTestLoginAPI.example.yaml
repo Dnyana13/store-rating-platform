@@ -1,0 +1,39 @@
+$kind: http-example
+name: ToTestLoginAPI
+request:
+  url: http://localhost:5000/api/auth/login
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"email\": \"amarja@example.com\",\r
+
+      \    \"password\": \"Pass@123\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: x-powered-by
+      value: Express
+    - key: access-control-allow-origin
+      value: "*"
+    - key: content-type
+      value: application/json; charset=utf-8
+    - key: content-length
+      value: "211"
+    - key: etag
+      value: W/"d3-WmnLvj2pClSmy9eBhmBy2c+0QnM"
+    - key: date
+      value: Sat, 11 Apr 2026 09:05:02 GMT
+    - key: connection
+      value: keep-alive
+    - key: keep-alive
+      value: timeout=5
+  body:
+    type: json
+    content: '{"message":"Login
+      successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU4OTgzMDIsImV4cCI6MTc3NTk4NDcwMn0.sgSJnq49J5GUX2BKSi6ka-G5CkqsW1Qzp1IenyXP46U","role":"USER"}'
+order: 1775898305054

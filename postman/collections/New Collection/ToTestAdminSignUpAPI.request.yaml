@@ -1,0 +1,20 @@
+$kind: http-request
+url: http://localhost:5000/api/auth/signup
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Admin User Fullstack Developer Name\",\r
+
+    \  \"email\": \"admin123@example.com\",\r
+
+    \  \"password\": \"Password@123\",\r
+
+    \  \"address\": \"Maharashtra India Full Address\", \r
+
+    \  \"role\": \"ADMIN\"\r
+
+    }"
+examples: .resources/ToTestAdminSignUpAPI.resources/examples
+order: 3000

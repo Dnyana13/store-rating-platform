@@ -1,0 +1,20 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/test-db
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "2"
+    etag: W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"
+    date: Fri, 10 Apr 2026 15:09:53 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: "[]"
+order: 1775833795022

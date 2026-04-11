@@ -1,0 +1,23 @@
+$kind: http-request
+name: ToTestAddUser
+url: http://localhost:5000//api/admin/add-user
+method: POST
+headers:
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU4OTgzMDIsImV4cCI6MTc3NTk4NDcwMn0.sgSJnq49J5GUX2BKSi6ka-G5CkqsW1Qzp1IenyXP46U
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Store Owner Example User Name Long Enough\",\r
+
+    \  \"email\": \"owner@test.com\",\r
+
+    \  \"password\": \"Password@123\",\r
+
+    \  \"address\": \"India Address\",\r
+
+    \  \"role\": \"OWNER\"\r
+
+    }"
+examples: .resources/ToTestAddUser.resources/examples
+order: 6000

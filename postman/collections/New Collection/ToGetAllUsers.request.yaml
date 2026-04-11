@@ -1,0 +1,10 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/users?role=OWNER&sort=DESC
+method: GET
+headers:
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NTkxMTg4MSwiZXhwIjoxNzc1OTk4MjgxfQ.W3Au9ydLyvZoj5AT3mh-NSIx81fSSn6G67UQG4KEqD4
+queryParams:
+  role: OWNER
+  sort: DESC
+examples: .resources/ToGetAllUsers.resources/examples
+order: 1913427441227383

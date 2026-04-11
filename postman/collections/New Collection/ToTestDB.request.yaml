@@ -1,0 +1,5 @@
+$kind: http-request
+url: http://localhost:5000/test-db
+method: GET
+examples: .resources/ToTestDB.resources/examples
+order: 2000

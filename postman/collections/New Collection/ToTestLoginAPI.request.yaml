@@ -1,0 +1,14 @@
+$kind: http-request
+url: http://localhost:5000/api/auth/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"amarja@example.com\",\r
+
+    \    \"password\": \"Pass@123\"\r
+
+    }"
+examples: .resources/ToTestLoginAPI.resources/examples
+order: 5000
