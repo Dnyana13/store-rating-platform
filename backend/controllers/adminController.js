@@ -90,13 +90,16 @@ exports.getUsers = async (req, res) => {
 // Get Stores (with average rating) and sorting by rating
 exports.getStores = async (req, res) => {
     try {
+        const { sort = 'ASC' } = req.query; // this fix added now you can sort stores by name or rating as per your requirement
+
         const stores = await Store.findAll({
-            include: [ // Include the Rating model to calculate average rating and get user's rating as mentioned in assignment
+            include: [
                 {
-                    model: Rating, // Include the Rating model to calculate average rating
-                    where: { user_id: req.user.id }, // Get the rating for the logged-in user
-                    required: false, // Left join to include stores without ratings from the user
-                    attributes: ['rating'] // Only include the rating value for the logged-in user
+                    model: Rating,
+                    as: 'Ratings',
+                    where: { user_id: req.user.id },
+                    required: false,
+                    attributes: []
                 }
             ],
             attributes: {
@@ -109,12 +112,8 @@ exports.getStores = async (req, res) => {
             },
             group: ['Store.id'],
 
-            
-            // Add Sorting to Stores by name or by average rating
-            order: [['name', sort]],
-            // This will sort by average rating if sort is 'DESC', otherwise it will sort by name (Add createdAt sorting as well)
-            order: [['createdAt', 'DESC']]
-
+            // Fixed ordering issue by allowing sorting by average rating or name based on query parameter
+            order: [['name', sort]]
         });
 
         res.json(stores);
@@ -135,6 +134,109 @@ exports.dashboard = async (req, res) => {
             totalUsers,
             totalStores,
             totalRatings
+        });
+
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+// Get all users (for admin dashboard)
+exports.getAllUsers = async (req, res) => {
+    try {
+        const users = await User.findAll({
+            attributes: ['id', 'name', 'email', 'role']
+        });
+
+        res.json(users);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+// Get all stores (with average rating) for admin dashboard
+exports.getAllStores = async (req, res) => {
+    try {
+        const stores = await Store.findAndCountAll({
+            include: [
+                {
+                    order: [['name', 'ASC']],
+                    model: Rating,
+                    as: 'Ratings',
+                    attributes: ['rating']
+                }
+            ]
+        });
+
+        res.json(stores);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+// Delete user
+exports.deleteUser = async (req, res) => {
+    try {
+        await User.destroy({ where: { id: req.params.id } });
+        res.json({ message: 'User deleted' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+// Delete store 
+exports.deleteStore = async (req, res) => {
+    try {
+        await Store.destroy({ where: { id: req.params.id } });
+        res.json({ message: 'Store deleted' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+// Dashboard stats for admin
+exports.getAdminStats = async (req, res) => {
+    try {
+        const totalUsers = await User.count();
+        const totalStores = await Store.count();
+        const totalRatings = await Rating.count();
+
+        res.json({
+            totalUsers,
+            totalStores,
+            totalRatings
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+
+// Create Store (Admin can create store for any owner)
+exports.createStore = async (req, res) => {
+    try {
+        const { name, email, address, owner_id } = req.body; // Admin can create store for any owner by providing owner_id in the request body
+
+        // Check if owner exists
+        const owner = await User.findOne({
+            where: { id: owner_id, role: 'OWNER' }
+        });
+
+        if (!owner) {
+            return res.status(400).json({ message: 'Invalid owner ID' });
+        }
+
+        // create store
+        const store = await Store.create({
+            name,
+            email,
+            address,
+            owner_id
+        });
+
+        res.status(201).json({
+            message: 'Store created successfully',
+            store
         });
 
     } catch (err) {

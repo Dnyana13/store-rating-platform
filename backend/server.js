@@ -3,47 +3,39 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-
 const morgan = require('morgan');
+
 app.use(morgan('dev'));
 
-
+// DB
 const { sequelize } = require('./models');
 
 sequelize.sync()
     .then(() => console.log('All models synced'))
     .catch(err => console.log(err));
 
-
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Test route
+// Routes
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
-
-
-// To Test Dummy DB API
 app.get('/test-db', async (req, res) => {
     const users = await require('./models').User.findAll();
     res.json(users);
 });
 
+// Auth
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
+// Middleware
 const { verifyToken } = require('./middleware/authMiddleware');
 
-
-// This will create protected route (for testing purposes) that requires a valid JWT token to access. You can test this by sending a request with the token in the Authorization header.
+// Protected route
 app.get('/protected', verifyToken, (req, res) => {
     res.json({
         message: 'Protected route accessed',
@@ -51,16 +43,20 @@ app.get('/protected', verifyToken, (req, res) => {
     });
 });
 
-
-// Admin Routes (Only for Admins)
+app.use(express.json());
+app.use(cors());
+// Role Routes
 const adminRoutes = require('./routes/adminRoutes');
-app.use('/api/admin', adminRoutes);
-
-// User Routes (Only for Users)
 const userRoutes = require('./routes/userRoutes');
-app.use('/api/user', userRoutes);
-
-
-// Owner Routes (Only for Owners)
 const ownerRoutes = require('./routes/ownerRoutes');
+
+app.use('/api/admin', adminRoutes);
+app.use('/api/user', userRoutes);
 app.use('/api/owner', ownerRoutes);
+
+// Server
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});

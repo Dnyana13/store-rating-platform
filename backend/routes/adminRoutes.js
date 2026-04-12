@@ -1,24 +1,26 @@
 const express = require('express');
 const router = express.Router();
-const adminController = require('../controllers/adminController');
+const adminController = require('../controllers/adminController'); // keep this
+
+// Middleware for authentication and role checking
 const { verifyToken, isAdmin } = require('../middleware/authMiddleware');
 
-// all routes protected and admin only
+// Apply middleware to all routes in this router
 router.use(verifyToken, isAdmin);
 
-// add user 
+// Routes for admin functionalities
 router.post('/add-user', adminController.addUser);
-
-// Add store
 router.post('/add-store', adminController.addStore);
 
-// get all users
+router.post('/store', adminController.createStore); // New route for creating store with owner assignment
+
 router.get('/users', adminController.getUsers);
-
-// get all stores
 router.get('/stores', adminController.getStores);
+router.get('/stats', adminController.getAdminStats);
 
-// Dashboard stats
 router.get('/dashboard', adminController.dashboard);
+
+router.delete('/user/:id', adminController.deleteUser);
+router.delete('/store/:id', adminController.deleteStore);
 
 module.exports = router;
