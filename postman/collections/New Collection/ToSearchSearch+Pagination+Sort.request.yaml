@@ -1,4 +1,5 @@
 $kind: http-request
+name: ToSearchSearch+Pagination+Sort
 url: http://localhost:5000/api/user/stores?name=Pizza&page=1&limit=2&sort=DESC
 method: GET
 headers:
@@ -9,4 +10,4 @@ queryParams:
   limit: "2"
   sort: DESC
 examples: .resources/ToSearchSearch+Pagination+Sort.resources/examples
-order: 22000
+order: 23000

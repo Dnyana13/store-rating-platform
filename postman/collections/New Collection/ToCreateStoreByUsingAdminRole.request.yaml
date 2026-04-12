@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/store
+method: POST
+headers:
+  Authorization: Bearer
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NjAwMjY0NiwiZXhwIjoxNzc2MDg5MDQ2fQ.REXy2-9d4_EMuThjOPXDeeNTCENnhPOq3OUmzhnFWlA
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Super Mart\",\r
+
+    \  \"address\": \"Mumbai\",\r
+
+    \  \"owner_id\": 2\r
+
+    }"
+examples: .resources/ToCreateStoreByUsingAdminRole.resources/examples
+order: 694088875664160

@@ -5,10 +5,10 @@ body:
   type: json
   content: "{\r
 
-    \  \"email\": \"admin123@example.com\",\r
+    \  \"email\": \"owner1@test.com\",\r
 
     \  \"password\": \"Password@123\"\r
 
     }"
-examples: .resources/ToTestAdminLogin.resources/examples
-order: 9000
+examples: .resources/ToTestOwnerSignup.resources/examples
+order: 24000

@@ -1,0 +1,37 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/auth/signup
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"name\": \"Shriram Kalidas Patil\",\r
+
+      \  \"email\": \"owner@gmail.com\",\r
+
+      \  \"password\": \"123456\",\r
+
+      \  \"address\": \"Pune\",\r
+
+      \  \"role\": \"owner\"\r
+
+      }"
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "226"
+    etag: W/"e2-KGlo53mwmbiEPawmkOKORWR177k"
+    date: Sun, 12 Apr 2026 10:04:14 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"User registered
+      successfully","user":{"id":27,"name":"Shriram Kalidas
+      Patil","email":"owner@gmail.com","address":"Pune","role":"owner","updatedAt":"2026-04-12T10:04:14.618Z","createdAt":"2026-04-12T10:04:14.618Z"}}'
+order: 2882524907848089

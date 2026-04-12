@@ -1,0 +1,9 @@
+$kind: http-request
+name: ToTestCallDashboardAPI
+url: http://localhost:5000/api/owner/dashboard
+method: GET
+headers:
+  Authorization: Bearer
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsInJvbGUiOiJPV05FUiIsImlhdCI6MTc3NTk4OTkyNCwiZXhwIjoxNzc2MDc2MzI0fQ.JDP9fkUaWcOJs0IvVkbYrVP2NVC8472jSHcyYBsLivk
+examples: .resources/ToTestCallDashboardAPI.resources/examples
+order: 26000

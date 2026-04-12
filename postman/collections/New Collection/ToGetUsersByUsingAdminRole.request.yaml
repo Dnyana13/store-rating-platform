@@ -1,11 +1,8 @@
 $kind: http-request
-name: ToGetAllStores
-url: http://localhost:5000/api/admin/stores?=
+url: http://localhost:5000/api/admin/users
 method: GET
 headers:
   Authorization: Bearer
     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NTk5ODAyNCwiZXhwIjoxNzc2MDg0NDI0fQ.ynBQc_iPYDPiiM07X-MxOFxBg53KPF2Nn__2IvJhdRg
-queryParams:
-  "": ""
-examples: .resources/ToGetAllStores.resources/examples
-order: 13000
+examples: .resources/ToGetUsersByUsingAdminRole.resources/examples
+order: 28000

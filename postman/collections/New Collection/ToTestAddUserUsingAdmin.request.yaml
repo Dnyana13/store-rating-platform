@@ -19,4 +19,4 @@ body:
 
     }"
 examples: .resources/ToTestAddUserUsingAdmin.resources/examples
-order: 10000
+order: 11000

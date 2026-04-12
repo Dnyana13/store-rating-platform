@@ -1,11 +1,9 @@
 $kind: http-request
-name: ToGetAllStores
-url: http://localhost:5000/api/admin/stores?=
+name: ToGetStatsUsingAdminRole
+url: http://localhost:5000/api/admin/stats
 method: GET
 headers:
   Authorization: Bearer
     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NTk5ODAyNCwiZXhwIjoxNzc2MDg0NDI0fQ.ynBQc_iPYDPiiM07X-MxOFxBg53KPF2Nn__2IvJhdRg
-queryParams:
-  "": ""
-examples: .resources/ToGetAllStores.resources/examples
-order: 13000
+examples: .resources/ToGetStatsUsingAdminRole.resources/examples
+order: 29009

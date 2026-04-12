@@ -1,0 +1,37 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/admin/users
+  method: GET
+  headers:
+    Authorization: Bearer
+      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NTk5ODAyNCwiZXhwIjoxNzc2MDg0NDI0fQ.ynBQc_iPYDPiiM07X-MxOFxBg53KPF2Nn__2IvJhdRg
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "1389"
+    etag: W/"56d-s1WCfvYib0RSFUiagV40etN0Fh0"
+    date: Sun, 12 Apr 2026 12:51:06 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"totalUsers":9,"totalPages":2,"currentPage":1,"data":[{"id":24,"name":"Admin
+      User Fullstack Developer
+      Name","email":"admin123@example.com","password":"$2b$10$UPTTpvUxjVsm19aBcBGOkOcC8fpGalXbputjdIQS3WnK868uvmMtu","address":"Maharashtra
+      India Full
+      Address","role":"ADMIN","createdAt":"2026-04-11T12:32:44.000Z","updatedAt":"2026-04-11T12:32:44.000Z"},{"id":11,"name":"AdminF
+      AdminM
+      AdminL","email":"admin@example.com","password":"$2b$10$K4PQ33oQvyDlL4LopCx04OB004xdKdaj.rDUKkuBFh6IXzb.uwVlK","address":"India","role":"USER","createdAt":"2026-04-11T10:04:24.000Z","updatedAt":"2026-04-11T10:04:24.000Z"},{"id":13,"name":"AdminF
+      AdminM
+      AdminL","email":"admin1@example.com","password":"$2b$10$jUrxd93AqYpzmf9On99KZeiQ2Hh9cKExxuPtJesC06A6fZniTQWIW","address":"India","role":"USER","createdAt":"2026-04-11T10:05:57.000Z","updatedAt":"2026-04-11T10:05:57.000Z"},{"id":3,"name":"Amarja
+      Ramakant
+      Sharma","email":"amarja@example.com","password":"$2b$10$LE03Pws1gQ.AllpUf8XOyu2DYogV9t7Z7Jd8Yh4PKmdDKdHqRGqyC","address":"India","role":"USER","createdAt":"2026-04-11T08:55:16.000Z","updatedAt":"2026-04-11T08:55:16.000Z"},{"id":1,"name":"Dnyana
+      FullStack
+      Developer","email":"dnyana@example.com","password":"$2b$10$oguJLcb9eVGpU5sPbWWwIuBa0m7wtRmOIp/fZTOiuSdxJPSlbv36q","address":"Solapur
+      Maharashtra
+      India","role":"USER","createdAt":"2026-04-11T08:40:50.000Z","updatedAt":"2026-04-11T08:40:50.000Z"}]}'
+order: 1775998269186

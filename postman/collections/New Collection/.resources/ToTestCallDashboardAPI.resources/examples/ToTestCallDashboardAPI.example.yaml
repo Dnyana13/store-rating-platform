@@ -1,0 +1,23 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/owner/dashboard
+  method: GET
+  headers:
+    Authorization: Bearer
+      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsInJvbGUiOiJPV05FUiIsImlhdCI6MTc3NTk4OTkyNCwiZXhwIjoxNzc2MDc2MzI0fQ.JDP9fkUaWcOJs0IvVkbYrVP2NVC8472jSHcyYBsLivk
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "44"
+    etag: W/"2c-mBUXDB6Moito4ZtQ0G3qzWAkqos"
+    date: Sun, 12 Apr 2026 10:41:21 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"Owner dashboard data","data":[]}'
+order: 1775990510982

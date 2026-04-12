@@ -5,4 +5,4 @@ method: GET
 headers:
   Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU5MjI3MDIsImV4cCI6MTc3NjAwOTEwMn0.poFLwRV1VFiloqSxJa0ndtptInrB4B-heh8B7qIHsv4
 examples: .resources/ToGetStoreFromUser-1.resources/examples
-order: 15000
+order: 16000

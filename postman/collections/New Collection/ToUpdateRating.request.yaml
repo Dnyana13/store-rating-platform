@@ -13,4 +13,4 @@ body:
 
     }"
 examples: .resources/ToUpdateRating.resources/examples
-order: 20000
+order: 21000

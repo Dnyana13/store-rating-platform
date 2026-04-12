@@ -1,0 +1,37 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/admin/store
+  method: POST
+  headers:
+    Authorization: Bearer
+      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NjAwMjY0NiwiZXhwIjoxNzc2MDg5MDQ2fQ.REXy2-9d4_EMuThjOPXDeeNTCENnhPOq3OUmzhnFWlA
+  body:
+    type: json
+    content: "{\r
+
+      \  \"name\": \"Super Mart\",\r
+
+      \  \"email\": \"owner@gmail.com\",\r
+
+      \  \"address\": \"Mumbai\",\r
+
+      \  \"owner_id\": 27\r
+
+      }"
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "214"
+    etag: W/"d6-iFUBSq6LFwpMUPUIkPJVONmG8NQ"
+    date: Sun, 12 Apr 2026 15:02:47 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"Store created successfully","store":{"id":3,"name":"Super
+      Mart","email":"owner@gmail.com","address":"Mumbai","owner_id":27,"updatedAt":"2026-04-12T15:02:45.535Z","createdAt":"2026-04-12T15:02:45.535Z"}}'
+order: 1776006206360
