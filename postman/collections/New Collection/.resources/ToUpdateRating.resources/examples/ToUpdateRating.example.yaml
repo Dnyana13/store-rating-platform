@@ -1,0 +1,32 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/user/rate
+  method: POST
+  headers:
+    Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU5MjI3MDIsImV4cCI6MTc3NjAwOTEwMn0.poFLwRV1VFiloqSxJa0ndtptInrB4B-heh8B7qIHsv4
+  body:
+    type: json
+    content: "{\r
+
+      \  \"store_id\": 1,\r
+
+      \  \"rating\": 3\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "168"
+    etag: W/"a8-NSwbQJOjvDI2iAZK4B+Qtw1xV90"
+    date: Sun, 12 Apr 2026 07:30:59 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"Rating
+      updated","existingRating":{"id":1,"rating":3,"createdAt":"2026-04-12T07:22:56.000Z","updatedAt":"2026-04-12T07:30:59.088Z","user_id":3,"store_id":1}}'
+order: 4382532477182959

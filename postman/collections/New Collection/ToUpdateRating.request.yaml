@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://localhost:5000/api/user/rate
+method: POST
+headers:
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU5MjI3MDIsImV4cCI6MTc3NjAwOTEwMn0.poFLwRV1VFiloqSxJa0ndtptInrB4B-heh8B7qIHsv4
+body:
+  type: json
+  content: "{\r
+
+    \  \"store_id\": 1,\r
+
+    \  \"rating\": 3\r
+
+    }"
+examples: .resources/ToUpdateRating.resources/examples
+order: 20000

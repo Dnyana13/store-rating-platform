@@ -1,0 +1,12 @@
+$kind: http-request
+url: http://localhost:5000/api/user/stores?name=Pizza&page=1&limit=2&sort=DESC
+method: GET
+headers:
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU5MjI3MDIsImV4cCI6MTc3NjAwOTEwMn0.poFLwRV1VFiloqSxJa0ndtptInrB4B-heh8B7qIHsv4
+queryParams:
+  name: Pizza
+  page: "1"
+  limit: "2"
+  sort: DESC
+examples: .resources/ToSearchSearch+Pagination+Sort.resources/examples
+order: 22000

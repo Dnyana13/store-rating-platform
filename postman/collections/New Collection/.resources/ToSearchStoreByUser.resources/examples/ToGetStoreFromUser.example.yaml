@@ -1,0 +1,24 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/user/stores
+  method: GET
+  headers:
+    Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU5MjI3MDIsImV4cCI6MTc3NjAwOTEwMn0.poFLwRV1VFiloqSxJa0ndtptInrB4B-heh8B7qIHsv4
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "369"
+    etag: W/"171-pvF3mgibdlEQU2MkVT+zJFEVGpo"
+    date: Sat, 11 Apr 2026 15:57:10 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '[{"id":1,"name":"Pizza
+      Store","email":"pizza@test.com","address":"Pune","createdAt":"2026-04-11T13:06:16.000Z","updatedAt":"2026-04-11T13:06:16.000Z","owner_id":2,"averageRating":null},{"id":2,"name":"Pizza
+      Store","email":"pizza@test.com","address":"Pune","createdAt":"2026-04-11T13:12:14.000Z","updatedAt":"2026-04-11T13:12:14.000Z","owner_id":2,"averageRating":null}]'
+order: 1775923034771

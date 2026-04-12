@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/user/stores?name=Pizza&page=1&limit=2&sort=DESC
+  method: GET
+  headers:
+    Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU5MjI3MDIsImV4cCI6MTc3NjAwOTEwMn0.poFLwRV1VFiloqSxJa0ndtptInrB4B-heh8B7qIHsv4
+  queryParams:
+    name: Pizza
+    page: "1"
+    limit: "2"
+    sort: DESC
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "501"
+    etag: W/"1f5-QBbSDz9v2Ylv5HB9cp0RgV2KUrg"
+    date: Sun, 12 Apr 2026 09:01:50 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"totalStores":2,"currentPage":1,"totalPages":1,"data":[{"id":1,"name":"Pizza
+      Store","email":"pizza@test.com","address":"Pune","createdAt":"2026-04-11T13:06:16.000Z","updatedAt":"2026-04-11T13:06:16.000Z","owner_id":2,"averageRating":"3.0000","totalRatings":1,"Ratings":[{"rating":3}]},{"id":2,"name":"Pizza
+      Store","email":"pizza@test.com","address":"Pune","createdAt":"2026-04-11T13:12:14.000Z","updatedAt":"2026-04-11T13:12:14.000Z","owner_id":2,"averageRating":null,"totalRatings":0,"Ratings":[]}]}'
+order: 1775984749737

@@ -52,5 +52,10 @@ app.get('/protected', verifyToken, (req, res) => {
 });
 
 
+// Admin Routes (Only for Admins)
 const adminRoutes = require('./routes/adminRoutes');
 app.use('/api/admin', adminRoutes);
+
+// User Routes (Only for Users)
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/user', userRoutes);

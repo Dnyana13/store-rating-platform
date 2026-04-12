@@ -1,0 +1,31 @@
+$kind: http-example
+request:
+  url: http://localhost:5000/api/user/rate
+  method: POST
+  headers:
+    Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzU5MjI3MDIsImV4cCI6MTc3NjAwOTEwMn0.poFLwRV1VFiloqSxJa0ndtptInrB4B-heh8B7qIHsv4
+  body:
+    type: json
+    content: "{\r
+
+      \  \"store_id\": 1,\r
+
+      \  \"rating\": 10\r
+
+      }"
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    x-powered-by: Express
+    access-control-allow-origin: "*"
+    content-type: application/json; charset=utf-8
+    content-length: "44"
+    etag: W/"2c-8lA1SdrxwpcyEc7pFkV8g3CmNf8"
+    date: Sun, 12 Apr 2026 09:15:02 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: '{"message":"Rating must be between 1 and 5"}'
+order: 1775985308113

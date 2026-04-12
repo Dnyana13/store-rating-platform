@@ -17,4 +17,4 @@ body:
 
     }"
 examples: .resources/ToTestAddSTOREUsingAdmin.resources/examples
-order: 9078
+order: 9000

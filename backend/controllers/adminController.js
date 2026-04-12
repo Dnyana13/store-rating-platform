@@ -91,10 +91,12 @@ exports.getUsers = async (req, res) => {
 exports.getStores = async (req, res) => {
     try {
         const stores = await Store.findAll({
-            include: [
+            include: [ // Include the Rating model to calculate average rating and get user's rating as mentioned in assignment
                 {
-                    model: Rating,
-                    attributes: []
+                    model: Rating, // Include the Rating model to calculate average rating
+                    where: { user_id: req.user.id }, // Get the rating for the logged-in user
+                    required: false, // Left join to include stores without ratings from the user
+                    attributes: ['rating'] // Only include the rating value for the logged-in user
                 }
             ],
             attributes: {
