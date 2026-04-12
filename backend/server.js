@@ -59,3 +59,8 @@ app.use('/api/admin', adminRoutes);
 // User Routes (Only for Users)
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/user', userRoutes);
+
+
+// Owner Routes (Only for Owners)
+const ownerRoutes = require('./routes/ownerRoutes');
+app.use('/api/owner', ownerRoutes);
