@@ -50,7 +50,7 @@ exports.signup = async (req, res) => {
 // Login
 exports.login = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, password, role } = req.body;
 
         const user = await User.findOne({ where: { email } });
 
